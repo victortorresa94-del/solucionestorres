@@ -160,12 +160,28 @@ ol {
 }
 
 .navbar-logo {
-  font-family: var(--font-sans);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-white);
-  letter-spacing: 0.5px;
-  transition: color 0.35s ease;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  /* Base height for logo container */
+  transition: all 0.35s ease;
+}
+
+.navbar-logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: filter 0.35s ease;
+}
+
+.navbar:not(.scrolled) .navbar-logo img {
+  /* Logo text is already white, perfect for dark hero */
+  filter: none;
+}
+
+.navbar.scrolled .navbar-logo img {
+  /* Make white text black for the light scrolled navbar */
+  filter: brightness(0);
 }
 
 .navbar.scrolled .navbar-logo {
