@@ -160,7 +160,7 @@ ol {
 }
 
 .navbar-logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-white);
@@ -261,7 +261,7 @@ ol {
 }
 
 .hero h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 700;
   color: var(--color-white);
