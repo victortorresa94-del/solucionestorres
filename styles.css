@@ -676,10 +676,9 @@ ol {
 
 .about-image img {
   width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: contain;
-  background: var(--color-white);
+  height: 500px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .about-image-badge {
