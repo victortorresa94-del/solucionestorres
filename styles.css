@@ -1447,12 +1447,197 @@ ol {
   color: #ef4444;
 }
 
-@media (max-width: 480px) {
+/* ============================================
+   RESPONSIVE — Tablet (≤ 900px)
+   ============================================ */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image img {
+    height: 420px;
+  }
+
+  .coverage-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — Mobile (≤ 640px)
+   ============================================ */
+@media (max-width: 640px) {
+
+  /* --- Navbar --- */
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar-logo {
+    height: 70px;
+  }
+
+  /* Hide CTA button in navbar on mobile — WhatsApp float covers it */
+  .navbar-cta {
+    display: none;
+  }
+
+  /* --- Hero --- */
+  :root {
+    --section-padding: 64px 0;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-badge {
+    font-size: 0.78rem;
+    padding: 7px 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* --- Values --- */
+  .value-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .value-item {
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .value-item:last-child {
+    border-bottom: none;
+  }
+
+  /* --- Services --- */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .services-header {
+    margin-bottom: 36px;
+  }
+
+  /* --- Trust metrics --- */
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .trust-item {
+    padding: 28px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .trust-item:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* --- Portfolio --- */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .portfolio-card {
+    height: 240px;
+  }
+
+  /* --- About --- */
+  .about-image img {
+    height: 340px;
+  }
+
+  .about-grid {
+    gap: 28px;
+  }
+
+  .about-signature {
+    margin-top: 24px;
+  }
+
+  /* --- Coverage --- */
+  .coverage-zones {
+    gap: 8px;
+  }
+
+  .coverage-zone-tag {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  /* --- Contact --- */
+  .contact-methods {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Footer --- */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .footer-col ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+  }
+
+  .footer-col ul li a,
+  .footer-col ul li span {
+    justify-content: center;
+  }
+
+  /* --- WhatsApp float — keep away from form submit --- */
   .whatsapp-float {
     bottom: 20px;
-    right: 20px;
-    width: 54px;
-    height: 54px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
   }
 
   .whatsapp-float svg {
